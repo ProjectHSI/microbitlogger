@@ -11,7 +11,21 @@ namespace MicroBitLogger {
         log(type: LogType, source: string, message: string): void
     }
 
+    let loggerClasses: ILogger[] = []
+
+    export function addLoggerToList(logger: ILogger) {
+        loggerClasses.push(logger)
+    }
+
+    //% block="generate sources string from $sources"
     export function generateSource(sources: string[]) {
         return sources.join(":")
+    }
+
+    //% block="log with type $type from $source $message"
+    export function logToAll(type: LogType, source: string, message: string) {
+        loggerClasses.forEach((logger) => {
+            logger.log(type, source, message)
+        })
     }
 }
