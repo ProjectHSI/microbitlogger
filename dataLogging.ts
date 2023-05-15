@@ -13,7 +13,7 @@ namespace MicroBitLoggers {
                 ])
             }
 
-            
+            //% block="log to data log with type of $type from $source $message"
             public log(type: MicroBitLogger.LogType, source: string, message: string) {
                 datalogger.logData([
                     datalogger.createCV("type", type.toString()),
