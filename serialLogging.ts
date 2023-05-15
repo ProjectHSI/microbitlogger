@@ -14,5 +14,12 @@ namespace MicroBitLoggers {
                 serial.writeLine(`${MicroBitLogger.getStringFromLogType(type)} log | ${source}: ${message}`)
             }
         }
+
+        //% block="create serial logger"
+        //% blockSetVariable="serial logger"
+        //% category="Serial Logger"
+        export function createSerialLogger(): SerialLogger {
+            return new SerialLogger()
+        }
     }
 }

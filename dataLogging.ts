@@ -40,5 +40,12 @@ namespace MicroBitLoggers {
                 ])
             }
         }
+
+        //% block="create data logger"
+        //% blockSetVariable="Data logger"
+        //% category="Data Logger"
+        export function createDataLogger(): DataLogger {
+            return new DataLogger()
+        }
     }
 }
