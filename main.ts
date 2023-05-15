@@ -1,4 +1,4 @@
-//% color=190 weight=100 icon="\uf120" block="Micro:Bit Loggers"
+//% color=190 weight=100 icon="\uf120" block="Micro:Bit Logger"
 namespace MicroBitLogger {
     export enum LogType {
         Error,
