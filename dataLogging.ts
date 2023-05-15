@@ -27,7 +27,10 @@ namespace MicroBitLoggers {
                 this.is_flash_ready = true
             }
 
-            //% block="log to data log with type of $type from $source $message"
+            //% block="log to flash log | type = $type source = $source message = $message"
+            //% type.defl=MicroBitLogger.LogType.Info
+            //% source.shadow=uBitLogger_generate_source
+            //% inlineInputMode=external
             public log(type: MicroBitLogger.LogType, source: string, message: string) {
                 this.initFlash() // will return prematurely if data logger is already ready
                 datalogger.logData([

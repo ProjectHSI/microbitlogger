@@ -6,7 +6,10 @@ namespace MicroBitLoggers {
                 MicroBitLogger.addLoggerToList(this)
             }
 
-            //% block="log to serial console with type of $type from $source $message"
+            //% block="log to serial console | type = $type source = $source message = $message"
+            //% type.defl=MicroBitLogger.LogType.Info
+            //% source.shadow=uBitLogger_generate_source
+            //% inlineInputMode=external
             public log(type: MicroBitLogger.LogType, source: string, message: string) {
                 serial.writeLine(`${MicroBitLogger.getStringFromLogType(type)} log | ${source}: ${message}`)
             }
