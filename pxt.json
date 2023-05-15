@@ -2,12 +2,14 @@
     "name": "MicroBitLogger",
     "description": "",
     "dependencies": {
-        "core": "*",
-        "microphone": "*"
+        "core": "*"
     },
     "files": [
         "main.ts",
-        "README.md"
+        "README.md",
+        "serialLogging.ts",
+        "dataLogging.ts",
+        "loggerInterface.ts"
     ],
     "testFiles": [
         "test.ts"
