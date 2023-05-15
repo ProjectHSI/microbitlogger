@@ -31,7 +31,7 @@ namespace MicroBitLoggers {
             public log(type: MicroBitLogger.LogType, source: string, message: string) {
                 this.initFlash() // will return prematurely if data logger is already ready
                 datalogger.logData([
-                    datalogger.createCV("type", type.toString()),
+                    datalogger.createCV("type", MicroBitLogger.getStringFromLogType(type)),
                     datalogger.createCV("source", source),
                     datalogger.createCV("message", message)
                 ])

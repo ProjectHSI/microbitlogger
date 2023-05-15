@@ -8,7 +8,7 @@ namespace MicroBitLoggers {
 
             //% block="log to serial console with type of $type from $source $message"
             public log(type: MicroBitLogger.LogType, source: string, message: string) {
-                serial.writeLine(`${type.toString()} log | ${source}: ${message}`)
+                serial.writeLine(`${MicroBitLogger.getStringFromLogType(type)} log | ${source}: ${message}`)
             }
         }
     }

@@ -17,6 +17,21 @@ namespace MicroBitLogger {
         loggerClasses.push(logger)
     }
 
+    //% block="get string from type $logType"
+    //% blockId=uBitLogger_get_string_from_log_type
+    export function getStringFromLogType(logType: LogType): string {
+        switch (logType) {
+            case LogType.Error:
+                return "Error"
+            case LogType.Warn:
+                return "Warn"
+            case LogType.Info:
+                return "Info"
+            case LogType.Verbose:
+                return "Verbose"
+        }
+    }
+
     //% block="generate sources string from $sources"
     //% blockId=uBitLogger_generate_source
     export function generateSource(sources: string[]) {
@@ -25,7 +40,7 @@ namespace MicroBitLogger {
 
     //% block="log | type = $type source = $source message = $message"
     //% blockId=uBitLogger_log_to_all
-    //% type.default=Info
+    //% type.defl=LogType.Info
     //% source.shadow=uBitLogger_generate_source
     //% inlineInputMode=external
     export function logToAll(type: LogType, source: string, message: string) {
