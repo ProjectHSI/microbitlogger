@@ -1,5 +1,5 @@
 namespace MicroBitLoggers {
-    namespace DataLogger {
+    export namespace DataLogger {
         export class DataLogger implements MicroBitLogger.ILogger {
             constructor() {
                 // we need to erase the data first before logging

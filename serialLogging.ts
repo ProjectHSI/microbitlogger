@@ -1,5 +1,5 @@
 namespace MicroBitLoggers {
-    namespace SerialLogger {
+    export namespace SerialLogger {
         export class SerialLogger implements MicroBitLogger.ILogger {
             public log(type: MicroBitLogger.LogType, source: string, message: string) {
                 serial.writeLine(`${type.toString()} log | ${source}: ${message}`)
