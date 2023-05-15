@@ -19,6 +19,7 @@ namespace MicroBitLogger {
 
     //% block="get string from type $logType"
     //% blockId=uBitLogger_get_string_from_log_type
+    //% type.defl=MicroBitLogger.LogType.Info
     export function getStringFromLogType(logType: LogType): string {
         switch (logType) {
             case LogType.Error:
