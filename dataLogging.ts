@@ -1,1 +1,32 @@
-// Add your code here
+namespace MicroBitLoggers {
+    namespace DataLogger {
+        export class DataLogger implements MicroBitLogger.ILogger {
+            constructor() {
+                // we need to erase the data first before logging
+                // otherwise the columns are all weird and we can't log
+                
+                datalogger.deleteLog()
+                datalogger.setColumns([
+                    "type",
+                    "source",
+                    "message"
+                ])
+            }
+
+            
+            public log(type: MicroBitLogger.LogType, source: string, message: string) {
+                datalogger.logData([
+                    datalogger.createCV("type", type.toString()),
+                    datalogger.createCV("source", source),
+                    datalogger.createCV("message", message)
+                ])
+            }
+        }
+
+        //% block="create serial logger"
+        //% blockSetVariable="serial logger"
+        export function createSerialLogger(): DataLogger {
+            return new DataLogger()
+        }
+    }
+}

@@ -2,7 +2,8 @@
     "name": "MicroBitLogger",
     "description": "",
     "dependencies": {
-        "core": "*"
+        "core": "*",
+        "datalogger": "*"
     },
     "files": [
         "main.ts",
