@@ -18,12 +18,14 @@ namespace MicroBitLogger {
     }
 
     //% block="generate sources string from $sources"
+    //% blockId=uBitLogger_generate_source
     export function generateSource(sources: string[]) {
         return sources.join(":")
     }
 
     //% block="log with type $type from $source $message"
-    //% source.shadow=generateSource
+    //% blockId=uBitLogger_log_to_all
+    //% source.shadow=uBitLogger_generate_source
     //% inlineInputMode=external
     export function logToAll(type: LogType, source: string, message: string) {
         loggerClasses.forEach((logger) => {
