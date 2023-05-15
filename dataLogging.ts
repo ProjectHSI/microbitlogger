@@ -23,9 +23,9 @@ namespace MicroBitLoggers {
             }
         }
 
-        //% block="create serial logger"
-        //% blockSetVariable="serial logger"
-        export function createSerialLogger(): DataLogger {
+        //% block="create data logger"
+        //% blockSetVariable="data logger"
+        export function createDataLogger(): DataLogger {
             return new DataLogger()
         }
     }
