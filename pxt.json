@@ -8,8 +8,7 @@
         "main.ts",
         "README.md",
         "serialLogging.ts",
-        "dataLogging.ts",
-        "loggerInterface.ts"
+        "dataLogging.ts"
     ],
     "testFiles": [
         "test.ts"
