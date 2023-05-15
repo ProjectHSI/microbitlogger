@@ -35,13 +35,13 @@ namespace MicroBitLogger {
     //% block="generate sources string from $sources"
     //% blockId=uBitLogger_generate_source
     export function generateSource(sources: string[]) {
-        return sources.join(":")
+        return sources.join("::")
     }
 
     //% block="log | type = $type source = $source message = $message"
     //% blockId=uBitLogger_log_to_all
     //% type.defl=LogType.Info
-    //% source.defl=uBitLogger_generate_source
+    //% source.shadow=uBitLogger_generate_source
     //% inlineInputMode=external
     export function logToAll(type: LogType, source: string, message: string) {
         loggerClasses.forEach((logger) => {
