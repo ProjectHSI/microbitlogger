@@ -25,6 +25,7 @@ namespace MicroBitLogger {
 
     //% block="log | type = $type source = $source message = $message"
     //% blockId=uBitLogger_log_to_all
+    //% type.default=Info
     //% source.shadow=uBitLogger_generate_source
     //% inlineInputMode=external
     export function logToAll(type: LogType, source: string, message: string) {
