@@ -23,7 +23,7 @@ namespace MicroBitLogger {
         return sources.join(":")
     }
 
-    //% block="log with type $type from $source $message"
+    //% block="log | type = $type | source = $source | message = $message"
     //% blockId=uBitLogger_log_to_all
     //% source.shadow=uBitLogger_generate_source
     //% inlineInputMode=external
