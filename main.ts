@@ -44,12 +44,16 @@ namespace MicroBitLogger {
     //% type.defl=MicroBitLogger.LogType.Info
     //% source.shadow=uBitLogger_generate_source
     //% inlineInputMode=external
+    //% color=190 weight=100 icon="\uf120" block="Loggers"
     export function logToAll(type: LogType, source: string, message: string) {
         loggerClasses.forEach((logger) => {
             logger.log(type, source, message)
         })
     }
+}
 
+//% color=190 weight=100 icon="\uf120" block="Loggers"
+namespace MicroBitLoggers {
     //% block="log with specific logger | logger = $logger type = $type source = $source message = $message"
     //% blockId=uBitLogger_log_to_specific_logger
     //% logger.shadow=variable_get
@@ -57,7 +61,7 @@ namespace MicroBitLogger {
     //% type.defl=MicroBitLogger.LogType.Info
     //% source.shadow=uBitLogger_generate_source
     //% inlineInputMode=external
-    export function logToSpecificLogger(logger: ILogger, type: LogType, source: string, message: string) {
+    export function logToSpecificLogger(logger: MicroBitLogger.ILogger, type: MicroBitLogger.LogType, source: string, message: string) {
         // basically an abstraction for Block users to use created loggers
         logger.log(type, source, message)
     }
