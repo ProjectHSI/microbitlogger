@@ -54,7 +54,7 @@ namespace MicroBitLogger {
 
 //% color=190 weight=100 icon="\uf120" block="Loggers"
 namespace MicroBitLoggers {
-    //% block="log | type = $type source = $source message = $message"
+    //% block="log with specific logger | type = $type source = $source message = $message"
     //% blockId=uBitLogger_log_to_specific_logger
     //% logger.shadow=variable_get
     //% logger.defl=logger
