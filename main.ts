@@ -23,6 +23,7 @@ namespace MicroBitLogger {
     }
 
     //% block="log with type $type from $source $message"
+    //% source.shadow=generateSource
     //% inlineInputMode=external
     export function logToAll(type: LogType, source: string, message: string) {
         loggerClasses.forEach((logger) => {
