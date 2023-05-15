@@ -49,4 +49,15 @@ namespace MicroBitLogger {
             logger.log(type, source, message)
         })
     }
+
+    //% block="log with specific logger | logger = $logger type = $type source = $source message = $message"
+    //% blockId=uBitLogger_log_to_specific_logger
+    //% logger.shadow=variable_get
+    //% type.defl=MicroBitLogger.LogType.Info
+    //% source.shadow=uBitLogger_generate_source
+    //% inlineInputMode=external
+    export function logToSpecificLogger(logger: ILogger, type: LogType, source: string, message: string) {
+        // basically an abstraction for Block users to use created loggers
+        logger.log(type, source, message)
+    }
 }
