@@ -1,7 +1,7 @@
 //% color=190 weight=100 icon="\uf120" block="Loggers"
 namespace MicroBitLoggers {
     export namespace SerialLogger {
-        export class SerialLogger implements MicroBitLogger.ILogger {
+        class SerialLogger implements MicroBitLogger.ILogger {
             constructor() {
                 MicroBitLogger.addLoggerToList(this)
             }
