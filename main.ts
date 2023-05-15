@@ -38,7 +38,7 @@ namespace MicroBitLogger {
     export function generateSource(sources: string[]) {
         return sources.join("::")
     }
-
+    
     //% block="log | type = $type source = $source message = $message"
     //% blockId=uBitLogger_log_to_all
     //% type.defl=MicroBitLogger.LogType.Info
@@ -53,6 +53,7 @@ namespace MicroBitLogger {
     //% block="log with specific logger | logger = $logger type = $type source = $source message = $message"
     //% blockId=uBitLogger_log_to_specific_logger
     //% logger.shadow=variable_get
+    //% logger.defl=logger
     //% type.defl=MicroBitLogger.LogType.Info
     //% source.shadow=uBitLogger_generate_source
     //% inlineInputMode=external
