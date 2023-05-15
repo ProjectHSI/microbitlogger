@@ -11,7 +11,7 @@ namespace MicroBitLoggers {
             //% source.shadow=uBitLogger_generate_source
             //% inlineInputMode=external
             public log(type: MicroBitLogger.LogType, source: string, message: string) {
-                serial.writeLine(`${MicroBitLogger.getStringFromLogType(type)} log | ${source}: ${message}`)
+                serial.writeLine(`${MicroBitLogger.getStringFromLogType(type)} log | ${source} : ${message}`)
             }
         }
 
