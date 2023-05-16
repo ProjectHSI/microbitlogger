@@ -44,7 +44,6 @@ namespace MicroBitLogger {
     //% type.defl=MicroBitLogger.LogType.Info
     //% source.shadow=uBitLogger_generate_source
     //% inlineInputMode=external
-    //% color=190 weight=100 icon="\uf120" block="Loggers"
     export function logToAll(type: LogType, source: string, message: string) {
         loggerClasses.forEach((logger) => {
             logger.log(type, source, message)
